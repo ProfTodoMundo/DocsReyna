@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{venndiagram}
+\graphicspath{ {imagenes} }
+
+
+\newtheorem{Def}{\quad Definición}
+\newtheorem{Note}{\quad Nota}
+\newtheorem{Ejem}{\quad Ejemplo}
+\newtheorem{Prop}{\quad Propiedad}
+\newtheorem{Theorem}{\quad Teorema}
+
+
+\title{Probabilidad}
+\author{REYNA LEON  APARICIO}
+\date{Agosto 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+Uno de los primeros juegos de azar es los dados, por lo que en la antigüedad se ocupaba un cubilete para contenerlos, moverlos dentro y luego arrojarlos sobre una superficie plana, en el juego existen diversas jugadas que se realizaban con estos, por lo tanto el jugador desea crear un análisis aleatorio del posible resultado  del objeto para valorar su ganancia o pérdida, sin importar el número de intentos sin éxito el cálculo de sus predicciones son incalculables. Un popular apostador conocido como el caballero de Meré, planteo la posibilidad de ganar a Blaise Pascal, al mismo tiempo consulta con Pierre de Fermat por lo cual empiezan a intercambiar cartas, aunque no se conoce todo lo que escribieron son muy importantes para los primeros fundamentos de la probabilidad. Meré creyó que había encontrado una falsedad en el juego, observando que el comportamiento de los dados era diferente cuando se utilizaba un dado que cuando se utilizaban dos dados. Pero su comparación era errónea entre la probabilidad de sacar un seis con un solo dado o de sacar un seis con dos dados. Para este caballero debería existir una relación proporcional entre el número de jugadas para conseguir el efecto deseado en uno y otro caso, El problema radico en que el caballero no tuvo en cuenta que al lanzar un dado se tiene un espacio muestral el cual nos dará todos los posibles  resultados $ \Omega = \{ 1, 2, 3, 4, 5,6 \}$ por lo que obtener un seis en un lanzamiento es: $ \frac{casos probables}{casos posibles} = \frac{1}{6} $, por lo que al lanzar dos dados, el número de resultados es $6^2 = 36$, por tanto obtener una pareja de seis es $\frac{1}{6}$.
+
+
+\subsection{Introducción a la Teoría de conjuntos}
+
+\begin{Def}
+Sea
+\end{Def}
+
+\begin{itemize}
+\item Definiciones 
+
+\item Operaciones entre conjuntos
+
+\item Espacio Muestral
+
+\item Eventos
+
+\item Definición frecuentista de probabilidad, ejemplos
+
+\item Definición de sigmas-algebras
+
+\item Definición de Probabilidad
+
+\end{itemize}
+
+
+
+
+
+
+
+\section{Pendiente por incluir}
+
+Una forma de probarlo es por contradicción, entonces debido a que para tener un doble seis al lanzar dos dados es $\frac{1}{36}$,para poder conseguir un 6 en uno de 37 lanzamientos de dos dados seria $37* \frac{1}{36} = \frac{37}{36} > 1$ por lo que esto seria falso, otra manera mas clara de verlo seria considerando los siguientes eventos: 
+
+A: obtener un seis en el primer lanzamiento 
+B: obtener un seis en el segundo lanzamiento 
+
+Entonces la unión de estos eventos se representan  en el siguiente diagrama: 
+
+\begin{figure}[!ht]
+\centering
+\begin{tikzpicture} [set/.style = {draw,circle,minimum size = 3.5cm},scale=0.5]
+%\draw (coordenada en x inf izq, coord en y supe izq) rectangle (coord x inf derecha,coord y sup der);
+\draw (-12,12) rectangle (12,-12);
+\node (A) at (-10:3cm) [set] {que};
+%\node (B) at (60:5cm) [set] {$I$};
+\node (C) at (0:5cm) [set] {qua};
+%\node at (barycentric cs:A=1,B=1) [left] {$V$};
+%\node at (barycentric cs:A=1,C=1) [below] {$VI$};
+%\node at (barycentric cs:B=1,C=1) [right] {$IV$};
+\node at (barycentric cs:A=1,C=1) [] {$(6,6)$};
+\node at (7,3.5) {\LARGE\textbf{B}};
+\node at (0,0) {\LARGE\textbf{ORIGEN}};
+\node at (-3,3.5) {\LARGE\textbf{A}};
+\node at (12,12) {\LARGE\textbf{ESD}};
+\node at (12,-12) {\LARGE\textbf{EID}};
+\node at (-12,-12) {\LARGE\textbf{EII}};
+\node at (-12,12) {\LARGE\textbf{ESI}};
+
+\end{tikzpicture}
+\caption{Data for Hospitalized patients: U (UCI), I (Intubated), D (Dead)} \label{fig:Regiones}
+\end{figure}
+
+
+Además, dentro de los resultados posibles del experimento hay 24 resultados en los que no se obtiene un seis. Otra manera de verlo mas simple es: 
+
+
+Por esta razón la probabilidad de obtener un seis en el primer lanzamiento o un seis en el segundo lanzamiento es igual a: 
+
+$P(A \cup B)=P(A)+P(B)-P(A \cap B) = \frac{6}{36} + \frac{6}{36} - \frac{1}{36} = \frac{11}{36}$
+
+Recordemos que el Caballero de Mere planteo que  
+
+$P(A \cup B)=P(A)+P(B) = \frac{1}{6} + \frac{1}{6} = \frac{12}{36} = \frac{1}{3}$
+
+Recordemos que estamos haciendo una contradicción por lo que $\frac{12}{36} \neq  \frac{11}{36}$ de este modo vemos que la proporcionalidad es falsa, ya que si dos eventos A y B son directamente proporcionales entonces $P(A) = kP(B)$, donde k es la constante de proporcionalidad 
+
+
+
+
+
+
+
+
+
+\section{Definición }
+
+
+
+\end{document}
